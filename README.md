@@ -48,15 +48,15 @@ To determine the practical use of technology integration.
 
 
 Strategic Goals
-Training and Development: We are focused on adding value to the skill sets of both community members and organizations. We are passionate about identifying skill gaps and providing relevant content to bridge those gaps. We are also equipped to provide effective training for individuals and organizations in Technology among others.
-Capacity building: Capacity building is a core goal of our work. The (YTT)  team will support capacity building in all primary and Secondary schools by providing onboarding support, training, and  workshops
-Collaboration opportunities: We are committed to working together to achieve our goals and to foster opportunities to collaborate with people in our movement whose voices are often unheard and underrepresented.
-Communication and Storytelling: We will structure our engagement channels and communications to ensure smooth information-sharing practices to reach wider students in our movement.
-Awareness: We will ensure that our work shows the value of technology in education. We will highlight the activities of the (YTT) members for others in the movement to be aware of their work.
+*Training and Development: We are focused on adding value to the skill sets of both community members and organizations. We are passionate about identifying skill gaps and providing relevant content to bridge those gaps. We are also equipped to provide effective training for individuals and organizations in Technology among others.
+*Capacity building: Capacity building is a core goal of our work. The (YTT)  team will support capacity building in all primary and Secondary schools by providing onboarding support, training, and  workshops
+*Collaboration opportunities: We are committed to working together to achieve our goals and to foster opportunities to collaborate with people in our movement whose voices are often unheard and underrepresented.
+*Communication and Storytelling: We will structure our engagement channels and communications to ensure smooth information-sharing practices to reach wider students in our movement.
+*Awareness: We will ensure that our work shows the value of technology in education. We will highlight the activities of the (YTT) members for others in the movement to be aware of their work.
 Representation: We will ensure volunteers of the small projects in our movement are represented in the activities run by the (YTT).
-Advocacy & Awareness: As a non-profit organization, our commitment is to Advocacy and Awareness creation for policy, policy change, etc. This dedication partly culminates in our drive to contribute to the Open Movement as a recognized affiliate of Wikimedia and Creative Commons.
-Consultancy Services: We are equipped to advise on Creative Commons and other areas of expertise as a non-profit. We create opportunities that invite all who work or have experience in the areas of our expertise to partner and collectively reach a greater impact. We also provide expert consultancy services in Research, Copyright, and licensing along with Kiwix Deployment.
-Digitization and Digitalisation: As part of our attempt to contribute to the digital representation of Tanzania and its culture, we have developed programs and events as an avenue to contribute our quota to a well-represented Africa. 
+*Advocacy & Awareness: As a non-profit organization, our commitment is to Advocacy and Awareness creation for policy, policy change, etc. This dedication partly culminates in our drive to contribute to the Open Movement as a recognized affiliate of Wikimedia and Creative Commons.
+*Consultancy Services: We are equipped to advise on Creative Commons and other areas of expertise as a non-profit. We create opportunities that invite all who work or have experience in the areas of our expertise to partner and collectively reach a greater impact. We also provide expert consultancy services in Research, Copyright, and licensing along with Kiwix Deployment.
+*Digitization and Digitalisation: As part of our attempt to contribute to the digital representation of Tanzania and its culture, we have developed programs and events as an avenue to contribute our quota to a well-represented Africa. 
 
 
 

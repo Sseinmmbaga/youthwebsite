@@ -911,7 +911,7 @@ Banner Style
   background: -webkit-linear-gradient(to right, #FA9D4D 0%, #FF4F6B 100%);
   background: -moz-linear-gradient(to right, #FA9D4D 0%, #FF4F6B 100%);
   background: linear-gradient(to right, #FA9D4D 0%, #FF4F6B 100%);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1727,4 +1727,8 @@ responsive
   form#contact {
     padding: 30px;
   }
+}
+h6.heade{
+  text-align: center;
+  
 }
