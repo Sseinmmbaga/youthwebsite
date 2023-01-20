@@ -1730,5 +1730,8 @@ responsive
 }
 h6.heade{
   text-align: center;
+  color: #191a20;
+  font-weight: bold;
+  text-decoration: underline;
   
 }
