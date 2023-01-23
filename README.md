@@ -3,8 +3,6 @@ visit link to get the document to of website               ---------------------
 
 
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -178,5 +176,4 @@ This is a unique opportunity to interact with different people and get exposed t
 Volunteering is an unparalleled opportunity to do something meaningful and to contribute your quota to shaping the narrative around Africa’s digital representation. By volunteering, you have the opportunity to give back. Inadvertently, you will gain an incredible sense of fulfillment, which will pay dividends for the rest of your life.
 Join our community now!
 
->>>>>>> 9918ec7a9d30a612e4ca640857152383b276ca40
                                                          
