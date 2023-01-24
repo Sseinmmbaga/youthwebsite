@@ -128,9 +128,11 @@ h4 {
 
 .tm-btn:hover,
 .tm-btn:focus {
-	background-color: #906E09;
+	background-color: #03a4ed;
 	color: white;
 	outline: none;
+	transform: scale(1.1125);
+	transition: 0.5s;
 }
 
 .tm-btn-gray { background-color: #666666; }
