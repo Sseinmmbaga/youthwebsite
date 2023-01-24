@@ -131,7 +131,7 @@ As a non-profit, we desire to impact lives in diverse ways. We’re looking for 
 
 
 
-Organizational structure
+<!-- Organizational structure
 
 
 
@@ -149,7 +149,7 @@ Training & Evaluations Associate
 Hussein M MMbaga
 Communications Associate
 Mohamed Mfuu
-Board Members
+Board Members -->
 
 
 
@@ -170,10 +170,10 @@ Board Members
 
 
 
-About us
+<!-- About us
 Youth Technology Tanzania it has  a mission to shape the narrative around Africa’s representation on the internet. We’re building a network of communities to do more than just that. We understand that Volunteering is an unbeatable opportunity to touch the world and leave your mark on it.
 This is a unique opportunity to interact with different people and get exposed to a wide variety of perspectives and approaches which lends a dynamism to the experience of being a part of the YTT Community.
 Volunteering is an unparalleled opportunity to do something meaningful and to contribute your quota to shaping the narrative around Africa’s digital representation. By volunteering, you have the opportunity to give back. Inadvertently, you will gain an incredible sense of fulfillment, which will pay dividends for the rest of your life.
-Join our community now!
+Join our community now! -->
 
                                                          
