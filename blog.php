@@ -44,10 +44,10 @@
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="./index.html" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="./index.php" class="active">Home</a></li>
               <!-- <li class="scroll-to-section"><a href="#features">Features</a></li> -->
-              <li class="scroll-to-section"><a href="./index.html">Campaigns</a></li>
-              <li class="scroll-to-section"><a href="./index.html#services">About Us</a></li>
+              <li class="scroll-to-section"><a href="./index.php">Campaigns</a></li>
+              <li class="scroll-to-section"><a href="./index.php#services">About Us</a></li>
               <li class="scroll-to-section nav-item active"><a href="">Blog</a></li>
               <li class="scroll-to-section"><a href="./index.html#contact">Volunteer</a></li> 
               <li class="scroll-to-section"><div class="main-blue-button"><a href="./index.html#contact">Donate</a></div></li> 
@@ -63,39 +63,59 @@
     <section class="tm-section">
       <div class="container-fluid">
           <div class="row">
-
+            <?php
+                $selected_id=$_GET['Id'];
+                 $conn=mysqli_connect("localhost","root","","youthTech");
+                          $selected_post_query=mysqli_query($conn,"SELECT * FROM `Posts` where `Id`=$selected_id");
+                           while ($post_selected=mysqli_fetch_array($selected_post_query)) {        
+            ?>
               <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9">
                   <div class="tm-blog-post">
-                      <h3 class="tm-gold-text">Wikipedia Judiciary Day</h3>
-                      <p>Wikipedia Judiciary Day  Held at Arusha Conference zone</p>
-                      <img src="./Images/image1.jpg" alt="Image" class="img-fluid tm-img-post">
+                      <h3 class="tm-gold-text"><?php echo $post_selected['Title']?></h3>
+                      <p><?php echo $post_selected['Author']?><?php echo "  ,"."  ".Date($post_selected['CreatedAt'])?></p>
+                      <img src="<?php echo $post_selected['Image_Path']?>" alt="Image" class="img-fluid tm-img-post">
                       
-                      <p>Youth Technology Tanzania it has  a mission to shape the narrative around Africa’s representation on the internet. We’re building a network of communities to do more than just that. We understand that Volunteering is an unbeatable opportunity to touch the world and leave your mark on it.</p> <br>
+                      <p><?php echo $post_selected['Paragraph1']?></p> <br>
 
-                      <p>This is a unique opportunity to interact with different people and get exposed to a wide variety of perspectives and approaches which lends a dynamism to the experience of being a part of the YTT Community.
-                        Volunteering is an unparalleled opportunity to do something meaningful and to contribute your quota to shaping the narrative around Africa’s digital representation. By volunteering, you have the opportunity to give back. Inadvertently, you will gain an incredible sense of fulfillment, which will pay dividends for the rest of your life.
-                        Join our community now!</p>
+                      <p><?php echo $post_selected['Paragraph2']?></p><br>
+
+                      <p><?php echo $post_selected['Paragraph3']?></p><br>
 
                       <!-- <p>Quisque vel sem eu turpis ullamcorper euismod. Praesent quis nisi ac augue luctus viverra. Sed et dui nisi. Fusce vitae dapibus justo. Pellentesque accumsan est ac posuere imperdiet. Curabitur eros mi, lacinia at euismod quis, dapibus vel ligula. Ut sodales erat vitae nunc tempor mollis. Donec tempor lobortis tortor, in feugiat massa facilisis sed. Ut dignissim viverra pretium. In eu justo maximus turpis feugiat finibus scelerisque nec eros. Cras nec lectus tempor nibh vestibulum eleifend et ac elit.</p> -->
 
                       <!-- <p>Sed vitae luctus libero. Nam sem neque, finibus id sem pharetra, cursus porttitor ligula. Praesent aliquam fermentum dui, vitae venenatis libero vulputate ac. Fusce bibendum scelerisque magna eget iaculis. Phasellus non arcu eu sem convallis semper. Duis vulputate dignissim rhoncus.</p> -->
                   </div>
-                  
+                  <?php
+                        }
+                  ?>
                   <div class="row tm-margin-t-big">
+                        <?php
+                          $conn=mysqli_connect("localhost","root","","youthTech");
+                          $post_query=mysqli_query($conn,"SELECT * FROM `Posts` order by Id desc");
+                      for ($i=1; $i <=3 ; $i++) {                                            
+                          while ($post_result=mysqli_fetch_array($post_query)) {                          
+
+            ?>
                       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 
                           <div class="tm-content-box">
-                              <img src="./Images/image1.jpg" alt="Image" class="tm-margin-b-30 img-fluid">
-                              <h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #1</h4>
-                              <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                              consequat mauris dapibus id. Donec
-                              scelerisque porttitor pharetra</p>
-                              <a href="#" class="tm-btn text-uppercase">Detail</a>    
+                              <img src="<?php echo $post_result['Image_Path']?>" alt="Image" class="tm-margin-b-30 img-fluid">
+                              <h4 class="tm-margin-b-20 tm-gold-text"><?php echo $post_result['Title']?></h4>
+                              <p class="tm-margin-b-20">
+                                <?php echo $post_result['Paragraph1']?>
+                              </p>
+                              <a href="blog.php?Id=<?php echo $post_result['Id']?>" class="tm-btn text-uppercase">Read More</a>    
                           </div>  
 
                       </div>
+              <?php
 
-                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                }
+              }
+                          
+              ?>
+
+                      <!-- <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 
                           <div class="tm-content-box">
                               <img src="./Images/image2.jpg" alt="Image" class="tm-margin-b-30 img-fluid">
@@ -106,9 +126,9 @@
                               <a href="#" class="tm-btn text-uppercase">Read More</a>    
                           </div>  
 
-                      </div>
+                      </div> -->
 
-                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                      <!-- <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 
                           <div class="tm-content-box">
                               <img src="./Images/image3.jpg" alt="Image" class="tm-margin-b-30 img-fluid">
@@ -119,7 +139,7 @@
                               <a href="#" class="tm-btn text-uppercase">Detail</a>    
                           </div>  
 
-                      </div>    
+                      </div>     -->
                   </div>
                   
               </div>
@@ -167,7 +187,7 @@
     
 
   
-<link rel="stylesheet" href="/assets/css/footer.css">
+<link rel="stylesheet" href="./assets/css/footer.css">
 <footer class="main-footer">
         <div class="container">
             <div class="footer-content">

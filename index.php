@@ -61,7 +61,7 @@
               <!-- <li class="scroll-to-section"><a href="#features">Features</a></li> -->
               <li class="scroll-to-section"><a href="#about">Campaigns</a></li>
               <li class="scroll-to-section"><a href="#services">About Us</a></li>
-              <li class="scroll-to-section"><a href="./blog.html ">Blog</a></li>
+              <li class="scroll-to-section"><a href="./blog.php">Blog</a></li>
               <li class="scroll-to-section"><a href="#contact">Volunteer</a></li> 
               <li class="scroll-to-section"><div class="main-blue-button"><a href="#contact">Donate</a></div></li> 
             </ul>        
@@ -423,20 +423,32 @@
         <!-- added from Blog -->
         <div class="row tm-margin-t-big  " data-wow-duration="0.5s" data-wow-delay="0.25s">
           <h4 class="blog-heading">Blog News</h4>
+          <?php
+                          $conn=mysqli_connect("localhost","root","","youthTech");
+                          $post_query=mysqli_query($conn,"SELECT * FROM `Posts` order by Id desc");
+                      for ($i=1; $i <=3 ; $i++) {                                            
+                          while ($post_result=mysqli_fetch_array($post_query)) {                          
+
+            ?>
                       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 
                           <div class="tm-content-box">
-                              <img src="./Images/image1.jpg" alt="Image" class="tm-margin-b-30 img-fluid">
-                              <h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #1</h4>
-                              <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                              consequat mauris dapibus id. Donec
-                              scelerisque porttitor pharetra</p>
-                              <a href="#" class="tm-btn text-uppercase">Detail</a>    
+                              <img src="<?php echo $post_result['Image_Path']?>" alt="Image" class="tm-margin-b-30 img-fluid">
+                              <h4 class="tm-margin-b-20 tm-gold-text"><?php echo $post_result['Title']?></h4>
+                              <p class="tm-margin-b-20">
+                                <?php echo $post_result['Paragraph1']?>
+                              </p>
+                              <a href="blog.php?Id=<?php echo $post_result['Id']?>" class="tm-btn text-uppercase">Read More</a>    
                           </div>  
 
                       </div>
+              <?php
 
-                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                }
+              }
+                          
+              ?>
+                      <!-- <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 
                           <div class="tm-content-box">
                               <img src="./Images/image2.jpg" alt="Image" class="tm-margin-b-30 img-fluid">
@@ -447,9 +459,9 @@
                               <a href="#" class="tm-btn text-uppercase">Read More</a>    
                           </div>  
 
-                      </div>
+                      </div> -->
 
-                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                      <!-- <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 
                           <div class="tm-content-box">
                               <img src="./Images/image3.jpg" alt="Image" class="tm-margin-b-30 img-fluid">
@@ -460,7 +472,7 @@
                               <a href="#" class="tm-btn text-uppercase">Detail</a>    
                           </div>  
 
-                      </div> 
+                      </div>  -->
       </div>
     </div>
   </div> 
@@ -545,7 +557,7 @@
 
 
 
-<link rel="stylesheet" href="/assets/css/footer.css">
+<link rel="stylesheet" href="./assets/css/footer.css">
 <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
