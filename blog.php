@@ -81,14 +81,14 @@
 
                       <p><?php echo $post_selected['Paragraph3']?></p><br>
 
-                      <!-- <p>Quisque vel sem eu turpis ullamcorper euismod. Praesent quis nisi ac augue luctus viverra. Sed et dui nisi. Fusce vitae dapibus justo. Pellentesque accumsan est ac posuere imperdiet. Curabitur eros mi, lacinia at euismod quis, dapibus vel ligula. Ut sodales erat vitae nunc tempor mollis. Donec tempor lobortis tortor, in feugiat massa facilisis sed. Ut dignissim viverra pretium. In eu justo maximus turpis feugiat finibus scelerisque nec eros. Cras nec lectus tempor nibh vestibulum eleifend et ac elit.</p> -->
-
-                      <!-- <p>Sed vitae luctus libero. Nam sem neque, finibus id sem pharetra, cursus porttitor ligula. Praesent aliquam fermentum dui, vitae venenatis libero vulputate ac. Fusce bibendum scelerisque magna eget iaculis. Phasellus non arcu eu sem convallis semper. Duis vulputate dignissim rhoncus.</p> -->
+                     
                   </div>
                   <?php
                         }
                   ?>
                   <div class="row tm-margin-t-big">
+                  <h4 class="blog-heading">Recent Post</h4>
+                  <hr>
                         <?php
                           $conn=mysqli_connect("localhost","root","","youthTech");
                           $post_query=mysqli_query($conn,"SELECT * FROM `Posts` order by Id desc");
@@ -106,8 +106,10 @@
                               </p>
                               <a href="blog.php?Id=<?php echo $post_result['Id']?>" class="tm-btn text-uppercase">Read More</a>    
                           </div>  
-
+                            <br>
+                           
                       </div>
+                     
               <?php
 
                 }
@@ -147,31 +149,17 @@
               <aside class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 tm-aside-r">
 
                   <div class="tm-aside-container">
-                      <h3 class="tm-gold-text tm-title">
-                          Categories
-                      </h3>
-                      <nav>
-                          <ul class="nav">
-                              <li><a href="#" class="tm-text-link">Lorem ipsum dolor sit</a></li>
-                              <li><a href="#" class="tm-text-link">Tincidunt non faucibus placerat</a></li>
-                              <li><a href="#" class="tm-text-link">Vestibulum tempor ac lectus</a></li>
-                              <li><a href="#" class="tm-text-link">Elementum egestas dui</a></li>
-                              <li><a href="#" class="tm-text-link">Nam in augue consectetur</a></li>
-                              <li><a href="#" class="tm-text-link">Fusce non turpis euismod</a></li>
-                              <li><a href="#" class="tm-text-link">Text Link Color #006699</a></li>
-                          </ul>
-                      </nav>
                       <hr class="tm-margin-t-small">   
                       <h3 class="tm-gold-text tm-title tm-margin-t-small">
                           Useful Links
                       </h3>
                       <nav>   
                           <ul class="nav">
-                              <li><a href="#" class="tm-text-link">Suspendisse sed dui nulla</a></li>
-                              <li><a href="#" class="tm-text-link">Lorem ipsum dolor sit</a></li>
-                              <li><a href="#" class="tm-text-link">Duiss nec purus et eros</a></li>
-                              <li><a href="#" class="tm-text-link">Etiam pulvinar et ligula sed</a></li>
-                              <li><a href="#" class="tm-text-link">Proin egestas eu felis et iaculis</a></li>
+                              <li><a href="#" class="tm-text-link">Our Meta page</a></li>
+                              <li><a href="#" class="tm-text-link">Dashboard</a></li>
+                              <li><a href="#" class="tm-text-link">facebook page</a></li>
+                              <li><a href="#" class="tm-text-link">instagram page</a></li>
+                              
                           </ul>
                       </nav>   
                       <hr class="tm-margin-t-small">       
