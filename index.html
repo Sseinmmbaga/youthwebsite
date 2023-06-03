@@ -61,7 +61,7 @@
               <!-- <li class="scroll-to-section"><a href="#features">Features</a></li> -->
               <li class="scroll-to-section"><a href="#about">Campaigns</a></li>
               <li class="scroll-to-section"><a href="#services">About Us</a></li>
-              <li class="scroll-to-section"><a href="./blog.html ">Blog</a></li>
+              <li class="scroll-to-section"><a href="./blog.php">Blog</a></li>
               <li class="scroll-to-section"><a href="#contact">Volunteer</a></li> 
               <li class="scroll-to-section"><div class="main-blue-button"><a href="#contact">Donate</a></div></li> 
             </ul>        
@@ -148,8 +148,7 @@
   
       </div>
     </div>
-  </section>
-  <section id="about">
+   <br>
     <div class="container">
       <div class="row">
   
@@ -374,7 +373,7 @@
             <div class="row">
               <div class="col-lg-4">
                 <div class="icon">
-                  <img src="Images/pngegg.png" alt="">
+                  <img src="Images/pngegg.png" alt="">Menu
                 </div>
               </div>
               <div class="col-lg-8">
@@ -423,20 +422,32 @@
         <!-- added from Blog -->
         <div class="row tm-margin-t-big  " data-wow-duration="0.5s" data-wow-delay="0.25s">
           <h4 class="blog-heading">Blog News</h4>
+          <?php
+                          $conn=mysqli_connect("localhost","root","","youthTech");
+                          $post_query=mysqli_query($conn,"SELECT * FROM `Posts` order by Id desc limit 3");
+                      for ($i=1; $i <=3 ; $i++) {                                            
+                          while ($post_result=mysqli_fetch_array($post_query)) {                          
+
+            ?>
                       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 
                           <div class="tm-content-box">
-                              <img src="./Images/image1.jpg" alt="Image" class="tm-margin-b-30 img-fluid">
-                              <h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #1</h4>
-                              <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                              consequat mauris dapibus id. Donec
-                              scelerisque porttitor pharetra</p>
-                              <a href="#" class="tm-btn text-uppercase">Detail</a>    
+                              <img src="<?php echo $post_result['Image_Path']?>" alt="Image" class="tm-margin-b-30 img-fluid">
+                              <h4 class="tm-margin-b-20 tm-gold-text"><?php echo $post_result['Title']?></h4>
+                              <p class="tm-margin-b-20">
+                                <?php echo $post_result['Paragraph1']?>
+                              </p>
+                              <a href="blog.php?Id=<?php echo $post_result['Id']?>" class="tm-btn text-uppercase">Read More</a>    
                           </div>  
-
+                            <br>
                       </div>
+              <?php
 
-                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                }
+              }
+                          
+              ?>
+                      <!-- <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 
                           <div class="tm-content-box">
                               <img src="./Images/image2.jpg" alt="Image" class="tm-margin-b-30 img-fluid">
@@ -447,9 +458,9 @@
                               <a href="#" class="tm-btn text-uppercase">Read More</a>    
                           </div>  
 
-                      </div>
+                      </div> -->
 
-                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                      <!-- <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 
                           <div class="tm-content-box">
                               <img src="./Images/image3.jpg" alt="Image" class="tm-margin-b-30 img-fluid">
@@ -460,7 +471,7 @@
                               <a href="#" class="tm-btn text-uppercase">Detail</a>    
                           </div>  
 
-                      </div> 
+                      </div>  -->
       </div>
     </div>
   </div> 
@@ -517,12 +528,6 @@
                   <ul>
                     <li>
                       <div class="icon">
-                        <img src="assets/images/contact-icon-01.png" alt="email icon">
-                      </div>
-                      <a href="#">info@company.com</a>
-                    </li>
-                    <li>
-                      <div class="icon">
                         <img src="assets/images/contact-icon-02.png" alt="phone">
                       </div>
                       <a href="#">+001-002-0034</a>
@@ -543,37 +548,76 @@
     </div>
   </div>
 
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col col-sm-3 align-self-start">
-          <div>
-            <h4>Youth_Tech</h4>
-            <p>Non Profitable Ogranization dadicated in bridging Free Educational on Technology.</p>
-          </div>
-        </div>
-        <div class="col col-sm-4">
-          <div>
-            <h4>Useful Links</h4><br>
-            <ul><li></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="#contact">Donate</a></li>
-            <li><a href="#about">About</a></li>
-          </ul>
-          </div>
-        </div>
-        <div class="col col-sm-2" >
-          <div>
-            <h4>Contact</h4>
-          </div>
-          <div><ul><li> <a href="" class="fa fa-whatsapp"></a>Whatsapp </li>
-          <li> <a href="" class="fa fa-twitter"></a> Twitter</li>
-          <li><a href="" class="fa fa-instagram"></a>Instagram</li></ul></div>
-        </div>
-      </div>
-    </div>
-  </footer>
 
+
+<link rel="stylesheet" href="./assets/css/footer.css">
+<footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="logo-widget footer-widget">
+                            <figure class="logo-box"><a href="#"><img src="https://i.ibb.co/QDy827D/ak-logo.pn" alt=""></a></figure>
+                            <div class="text">
+                                <p>Youth technology Tanzania (YTT) is a Non-Profit organization based in Tanzania dedicated to bridging Free education on technology,
+                                     Cyber security, Free access to information, Entrepreneurship skills, 
+                                    Leadership skills, Research skills, Climate change, and sustainability issues to the young generation in Primary and Secondary schools</p>
+                            </div>
+                            <ul class="footer-social">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 offset-lg-2 footer-column">
+                        <div class="service-widget footer-widget">
+                            <div class="footer-title">Services</div>
+                            <ul class="list">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Campaigns</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Volunteer</a></li>
+                                <li><a href="#">About-us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 footer-widget">
+                        <div class="contact-widget footer-widget">
+                            <div class="footer-title">Contacts</div>
+                            <div class="text">
+                            <ul class="list">
+                                <li><a href="tel:+255 764 454 097">+255 764 454 097</a></li>
+                                <li><a href="sms:+255 764 454 097">+255 764 454 097</a></li>
+                                <li><a href="mailto:Wikikilimanjaro12@gmail.com" style="font-size:medium;">Wikikilimanjaro12@gmail.com</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- main-footer end -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 column">
+                    <div class="copyright"><a href="#">Anup</a> &copy; 2019 All Right Reserved</div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 column">
+                    <ul class="footer-nav">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  
   <!-- Scripts -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
