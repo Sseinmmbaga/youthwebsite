@@ -66,6 +66,32 @@
             <?php
                 $selected_id=$_GET['Id'];
                  $conn=mysqli_connect("localhost","root","","youthTech");
+                 if (empty($selected_id)) {
+                    # code...
+                    $selected_post_query=mysqli_query($conn,"SELECT * FROM `Posts` order by Id desc limit 1");
+                        while ($post_selected=mysqli_fetch_array($selected_post_query)){
+                    ?>
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9">
+                  <div class="tm-blog-post">
+                      <h3 class="tm-gold-text"><?php echo $post_selected['Title']?></h3>
+                      <p><?php echo $post_selected['Author']?><?php echo "  ,"."  ".Date($post_selected['CreatedAt'])?></p>
+                      <img src="<?php echo $post_selected['Image_Path']?>" alt="Image" class="img-fluid tm-img-post">
+                      
+                      <p><?php echo $post_selected['Paragraph1']?></p> <br>
+
+                      <p><?php echo $post_selected['Paragraph2']?></p><br>
+
+                      <p><?php echo $post_selected['Paragraph3']?></p><br>
+
+                     
+                  </div>
+                  <?php
+                        }
+                    ?>
+                        <?php
+                }
+                else {
+                    # code...                
                           $selected_post_query=mysqli_query($conn,"SELECT * FROM `Posts` where `Id`=$selected_id");
                            while ($post_selected=mysqli_fetch_array($selected_post_query)) {        
             ?>
@@ -85,6 +111,7 @@
                   </div>
                   <?php
                         }
+                    }
                   ?>
                   <div class="row tm-margin-t-big">
                   <h4 class="blog-heading">Recent Post</h4>
