@@ -148,8 +148,7 @@
   
       </div>
     </div>
-  </section>
-  <section id="about">
+   <br>
     <div class="container">
       <div class="row">
   
@@ -374,7 +373,7 @@
             <div class="row">
               <div class="col-lg-4">
                 <div class="icon">
-                  <img src="Images/pngegg.png" alt="">
+                  <img src="Images/pngegg.png" alt="">Menu
                 </div>
               </div>
               <div class="col-lg-8">
@@ -413,7 +412,7 @@
               </div>
               <div class="col-lg-8">
                 <div class="right-content">
-                  <h4>Kelvin Charles Meena</h4>
+                  <h4>Hussein Mmbaga</h4>
                   <p>Programs Officer</p>
                 </div>
               </div>
@@ -425,7 +424,7 @@
           <h4 class="blog-heading">Blog News</h4>
           <?php
                           $conn=mysqli_connect("localhost","root","","youthTech");
-                          $post_query=mysqli_query($conn,"SELECT * FROM `Posts` order by Id desc");
+                          $post_query=mysqli_query($conn,"SELECT * FROM `Posts` order by Id desc limit 3");
                       for ($i=1; $i <=3 ; $i++) {                                            
                           while ($post_result=mysqli_fetch_array($post_query)) {                          
 
@@ -440,7 +439,7 @@
                               </p>
                               <a href="blog.php?Id=<?php echo $post_result['Id']?>" class="tm-btn text-uppercase">Read More</a>    
                           </div>  
-
+                            <br>
                       </div>
               <?php
 
@@ -529,12 +528,6 @@
                   <ul>
                     <li>
                       <div class="icon">
-                        <img src="assets/images/contact-icon-01.png" alt="email icon">
-                      </div>
-                      <a href="#">info@company.com</a>
-                    </li>
-                    <li>
-                      <div class="icon">
                         <img src="assets/images/contact-icon-02.png" alt="phone">
                       </div>
                       <a href="#">+001-002-0034</a>
@@ -564,9 +557,11 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                         <div class="logo-widget footer-widget">
-                            <figure class="logo-box"><a href="#"><img src="https://i.ibb.co/QDy827D/ak-logo.png" alt=""></a></figure>
+                            <figure class="logo-box"><a href="#"><img src="https://i.ibb.co/QDy827D/ak-logo.pn" alt=""></a></figure>
                             <div class="text">
-                                <p>Lorem ipsum dolor amet consectetur adi pisicing elit sed eiusm tempor incididunt ut labore dolore magna aliqua enim ad minim veniam quis.nostrud exercita.laboris nisi ut aliquip ea commodo conse quatuis aute irure.</p>
+                                <p>Youth technology Tanzania (YTT) is a Non-Profit organization based in Tanzania dedicated to bridging Free education on technology,
+                                     Cyber security, Free access to information, Entrepreneurship skills, 
+                                    Leadership skills, Research skills, Climate change, and sustainability issues to the young generation in Primary and Secondary schools</p>
                             </div>
                             <ul class="footer-social">
                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -580,11 +575,11 @@
                         <div class="service-widget footer-widget">
                             <div class="footer-title">Services</div>
                             <ul class="list">
-                                <li><a href="#">Water Surve</a></li>
-                                <li><a href="#">Education for all</a></li>
-                                <li><a href="#">Food Serving</a></li>
-                                <li><a href="#">Animal Saves</a></li>
-                                <li><a href="#">Help Orphan</a></li>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Campaigns</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Volunteer</a></li>
+                                <li><a href="#">About-us</a></li>
                             </ul>
                         </div>
                     </div>
@@ -592,9 +587,11 @@
                         <div class="contact-widget footer-widget">
                             <div class="footer-title">Contacts</div>
                             <div class="text">
-                                <p>Lorem Ipsum, simply dummy text, printing, Chandigarh</p>
-                                <p>+2(784) 1223323</p>
-                                <p>info@example.com</p>
+                            <ul class="list">
+                                <li><a href="tel:+255 764 454 097">+255 764 454 097</a></li>
+                                <li><a href="sms:+255 764 454 097">+255 764 454 097</a></li>
+                                <li><a href="mailto:Wikikilimanjaro12@gmail.com" style="font-size:medium;">Wikikilimanjaro12@gmail.com</a></li>
+                            </ul>
                             </div>
                         </div>
                     </div>
