@@ -530,13 +530,13 @@
                       <div class="icon">
                         <img src="assets/images/contact-icon-02.png" alt="phone">
                       </div>
-                      <a href="#">+001-002-0034</a>
+                      <a href="#">+255 764 454 097</a
                     </li>
                     <li>
                       <div class="icon">
                         <img src="assets/images/contact-icon-03.png" alt="location">
                       </div>
-                      <a href="#">26th Street, Digital Villa</a>
+                      <a href="#">Kilimanjaro, Tanzania</a>
                     </li>
                   </ul>
                 </div>
