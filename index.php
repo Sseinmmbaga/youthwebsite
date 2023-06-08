@@ -423,7 +423,7 @@
         <div class="row tm-margin-t-big  " data-wow-duration="0.5s" data-wow-delay="0.25s">
           <h4 class="blog-heading">Blog News</h4>
           <?php
-                          $conn=mysqli_connect("localhost","root","","youthTech");
+                          include_once "./connection.php";
                           $post_query=mysqli_query($conn,"SELECT * FROM `Posts` order by Id desc limit 3");
                       for ($i=1; $i <=3 ; $i++) {                                            
                           while ($post_result=mysqli_fetch_array($post_query)) {                          
@@ -481,7 +481,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
-          <form id="contact" action="" method="post">
+          <form id="contact" action="contact_action.php" method="post">
             <div class="row">
               <div class="col-lg-6 offset-lg-3">
                 <div class="section-heading">
@@ -518,7 +518,7 @@
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
-                      <button type="submit" id="form-submit" class="main-button ">Send Message Now</button>
+                      <button type="submit" name="submit" id="form-submit" class="main-button ">Send Message Now</button>
                     </fieldset>
                   </div>
                 </div>

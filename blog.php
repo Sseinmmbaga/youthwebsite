@@ -65,7 +65,7 @@
           <div class="row">
             <?php
                 $selected_id=$_GET['Id'];
-                 $conn=mysqli_connect("localhost","root","","youthTech");
+                 include_once "./connection.php";
                  if (empty($selected_id)) {
                     # code...
                     $selected_post_query=mysqli_query($conn,"SELECT * FROM `Posts` order by Id desc limit 1");
