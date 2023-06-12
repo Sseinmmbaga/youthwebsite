@@ -1,3 +1,6 @@
+<?php 
+include_once "./connection.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,9 +30,13 @@
     <link rel="stylesheet" href="./vendor/bootstrap/css/template-mo.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400"> Google web font "Open Sans"
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!--
+    <!--  Footer Link-->
+    <link rel="stylesheet" href="./assets/css/footer.css">
 
--->
+<style>
+
+
+</style>
 </head>
 
 <body>
@@ -185,8 +192,8 @@
                                         </h3>
                                         <nav>
                                             <ul >
-                                                <li><a href="#" class="tm-text-link">Our Meta page</a></li>
-                                                <li><a href="#" class="tm-text-link">Dashboard</a></li>
+                                                <li><a href="https://meta.m.wikimedia.org/wiki/Wikimedia_Community_Kilimanjaro" target="_blank" class="tm-text-link">Our Meta page</a></li>
+                                                <li><a href="" class="tm-text-link">Dashboard</a></li>
                                                 <li><a href="#" class="tm-text-link">Facebook page</a></li>
                                                 <li><a href="#" class="tm-text-link">Instagram page</a></li>
 
@@ -202,77 +209,106 @@
 
                 </div>
         </section>
-
-
-
-        <link rel="stylesheet" href="./assets/css/footer.css">
-        <footer class="main-footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
-                            <div class="logo-widget footer-widget">
-                                <figure class="logo-box"><a href="#" class="logo">Youth Tech<img src="./assets/images/" alt=""></a></figure>
-                                <div class="text">
-                                    <p>Youth technology Tanzania (YTT) is a Non-Profit organization based in Tanzania dedicated to bridging Free education on technology,
-                                        Cyber security, Free access to information, Entrepreneurship skills,
-                                        Leadership skills, Research skills, Climate change, and sustainability issues to the young generation in Primary and Secondary schools
-                                    </p>
-                                </div>
-                                <ul class="footer-social">
-                                    <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class='fa fa-instagram' style='color: red'></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 offset-lg-2 footer-column">
-                            <div class="service-widget footer-widget">
-                                <div class="footer-title">Pages</div>
-                                <ul class="list">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Campaigns</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Volunteer</a></li>
-                                    <li><a href="#">About-us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-widget">
-                            <div class="contact-widget footer-widget">
-                                <div class="footer-title">Contacts</div>
-                                <div class="text">
-                                    <p>Lorem Ipsum, simply dummy text, printing, Chandigarh</p>
-                                    <p>+2(784) 1223323</p>
-                                    <p>info@example.com</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- main-footer end -->
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12 column">
-                        <div class="copyright"><a href="#">Anuulis</a> &copy; 2019 All Right Reserved</div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 column">
-                        <ul class="footer-nav">
-                            <li><a href="#">Terms of Service</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        
+ <!-- Footer Start -->
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-blog">
+          <h3>Useful Links </h3>
+          <div>
+            <a href="https://meta.m.wikimedia.org/wiki/Wikimedia_Community_Kilimanjaro" target="_blank">Our Meta page</a>
+            
+          </div>
+          <div>
+            <a href="#">Dashboard</a>
+           
+          </div>
+          <div>
+            <a href="#">Facebook page</a>
+            
+          </div>
         </div>
-
-
-    </header>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-insta">
+          <h3>From Instagram</h3>
+          <a href=""><img src="Images/abu1.jpg" alt="Image"></a>
+          <a href=""><img src="Images/abu2.jpg" alt="Image"></a>
+          <a href=""><img src="Images/abu3.jpg" alt="Image"></a>
+          <a href=""><img src="Images/abu1.jpg" alt="Image"></a>
+          <a href=""><img src="Images/abu4.jpg" alt="Image"></a>
+          <a href=""><img src="Images/abu2.jpg" alt="Image"></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-tags">
+          <h3>Pages</h3>
+          <a href="">Home</a>
+          <a href="">Campaigns</a>
+          <a href="">About Us</a>
+          <a href="">Blog</a>
+          <a href="">Volunteer</a>
+          <a href="">Donate</a>
+         
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-newsletter">
+          <h3>Newsletter</h3>
+          <div class="form">
+            <input class="form-control" placeholder="Your Name">
+            <input class="form-control" placeholder="Your Email">
+            <button class="btn">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-contact">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <h4>Call Now</h4>
+          <p>+255 756 7890</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Email Us</h4>
+          <p>wikimediakilimanjaro12@youthtech.com</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Get in Touch</h4>
+          <a href=""><i class="fa fa-twitter"></i></a>
+          <a href=""><i class="fa fa-facebook-f"></i></a>
+          <a href=""><i class="fa fa-youtube"></i></a>
+          <a href=""><i class="fa fa-instagram"></i></a>
+          <a href=""><i class="fa fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="copy-text">
+            <p>&copy; <a href="#">Youth Tech</a>. All Rights Reserved.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="copy-menu">
+            <a href="">Terms</a>
+            <a href="">Privacy</a>
+            <a href="">Author</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer End -->
+  
   <!-- Scripts -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
