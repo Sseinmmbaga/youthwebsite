@@ -47,7 +47,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <form method="post" role="form">
+            <form method="post" action="" role="form" enctype="multipart/form-data">
               <div class="form-group">
                 <span>Title</span><input type="text" class="form-control" name="title" placeholder="Title"  value="<?php  echo $post_results['Title'] ?>"/>
               </div>
@@ -59,15 +59,8 @@
               </div>
               <div class="form-group">
                 <label> Image </label>
-                <div class="input-group">
-
-                  <span class="input-group-btn">
-                    <span class="btn btn-primary btn-file">
-                      Browse <input type="file" name="bimgs" multiple>
-                    </span>
-                  </span>
-                  <input type="text" class="form-control">
-                </div>
+                <div class="form-group">
+                  <input type='file' name="postImage" class='form-control form-control-lg' accept="image/*" >                                    
               </div>
               <div class="form-group">
                 <span>Paragraph1</span><textarea class="form-control bcontent" name="paragraph01" placeholder="Paragraph" maxlength="700"><?php  echo $post_results['Paragraph1'] ?></textarea>
@@ -79,7 +72,7 @@
                 <span>Paragraph3</span><textarea class="form-control bcontent" name="paragraph03" placeholder="Paragraph" maxlength="700"><?php  echo $post_results['Paragraph3'] ?></textarea>
               </div>
               <div class="form-group">
-                <input type="submit" name="Submit" value="Publish" class="btn btn-primary form-control" />
+                <input type="submit" name="submit" value="Publish" class="btn btn-primary form-control" />
               </div>
             </form>
           </div>
@@ -90,5 +83,56 @@
   </div>
 
 </body>
+<?php
+if (isset($_POST['submit'])) {
+  # code...
+      // GETTING  INPUT VALUES
+      $edited_title=mysqli_real_escape_string($conn, $_POST['title']);
+
+      $edited_author=mysqli_real_escape_string($conn, $_POST['author']);
+
+      $edited_category=mysqli_real_escape_string($conn,$_POST['category']);      
+
+      $edited_paragraph1=mysqli_real_escape_string($conn,$_POST['paragraph01']);
+
+      $edited_paragraph2=mysqli_real_escape_string($conn,$_POST['paragraph02']);
+
+      $edited_paragraph3=mysqli_real_escape_string($conn,$_POST['paragraph03']); 
+
+      // book Path
+                  //Detaile for the Book image
+              $imageTmpPath=$_FILES['postImage']['tmp_name'];
+              
+              $image_name=str_replace(' ','',$_FILES['postImage']['name']);         //without space
+              $image_directory="../Images/";                                        //image directory from this current file
+
+              $image_dir=$image_directory.$image_name;                               // path for writing
+              $image_path="./Images/".$image_name;                                   // path for reading file
+
+              // $image_target_file = $image_dir . basename($_FILES["postImage"]["name"]);
+              $uploadOk = 1;      
+
+              
+              $edit_query="UPDATE `Posts` SET `Category`='$edited_category',
+                                              `Author`='$edited_author',
+                                              `Title`='$edited_title',
+                                              `Image_Path`='$image_path',
+                                              `Paragraph1`='$edited_paragraph1',
+                                              `Paragraph2`='$edited_paragraph2',
+                                              `Paragraph3`='$edited_paragraph3'                                            
+                                            WHERE `Id`='$post_Id'";
+
+
+              $update_query=mysqli_query($conn,"$edit_query");
+
+              if (!$edit_query) {
+                 # code...
+              }
+              else{
+                  move_uploaded_file($imageTmpPath,$image_dir);
+                  header("Location:allData.php");
+              }
+}
+?>
 
 </html>
