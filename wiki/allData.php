@@ -21,12 +21,32 @@ include_once "./include/connection.php";
 
 
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/sidebar.css">
     <title>All Data</title>
 
 </head>
 
 <body>
-    <div class="fluid">        
+    <input type="checkbox" name="MenuToggle" id="MenuToggle">
+<aside class="sidebar">
+   <nav>
+      <a href="#" class="logo">Logo</a>
+      <div class="nav_items">
+         <a href="allData.php" class="active">All Data</a>
+         <a href="insert_data.php">Insert Data</a>
+         <a href="edit_data.php">Edit Data</a>
+      </div>
+   </nav>
+</aside>
+<main class="right ">
+   <label for="MenuToggle" class="toggle__icon">
+   <span class="line line1"></span>
+   <span class="line line3"></span>
+   <span class="line line2"></span>
+   </label>
+   <div class="content">
+     <div class="container">
+       <div class="fluid">        
         <div class="container mt-5">
             <div class='jumbotron jumbotron-fluid text-center color-set '>
                 <div class="container">
@@ -94,6 +114,10 @@ include_once "./include/connection.php";
             </div>
         </div>
     </div>
+     </div>
+   </div>
+</main>
+   
 
 </body>
 

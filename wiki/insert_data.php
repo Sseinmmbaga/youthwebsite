@@ -16,11 +16,30 @@ include_once "./include/connection.php";
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/sidebar.css">
 
 </head>
 
 <body>
-  <div class="fluid">
+  <input type="checkbox" name="MenuToggle" id="MenuToggle">
+<aside class="sidebar">
+   <nav>
+      <a href="#" class="logo">Logo</a>
+      <div class="nav_items">
+        <a href="allData.php" >All Data</a>
+        <a href="insert_data.php" class="active">Insert Data</a>
+        <a href="edit_data.php">Edit Data</a>
+      </div>
+   </nav>
+</aside>
+<main class="right">
+   <label for="MenuToggle" class="toggle__icon">
+   <span class="line line1"></span>
+   <span class="line line3"></span>
+   <span class="line line2"></span>
+   </label>
+   <div class="content">
+       <div class="fluid">
     <div class="container mt-5">
       <div class='jumbotron jumbotron-fluid text-center color-set '>
         <div class="container">
@@ -72,6 +91,9 @@ include_once "./include/connection.php";
 
   </div>
 
+   </div>
+</main>
+ 
 </body>
 <?php
 if (isset($_POST['submit'])) {
