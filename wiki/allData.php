@@ -1,5 +1,13 @@
 <?php
 include_once "./include/connection.php";
+session_start();
+
+      if ($_SESSION['name'] == NULL ) {
+          # code...
+            session_destroy();
+            session_unset();            
+            header("location:index.php");
+        }
 ?>
 <!DOCTYPE html>
 <html lang="en">

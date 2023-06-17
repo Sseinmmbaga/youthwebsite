@@ -2,7 +2,14 @@
   include_once "./include/connection.php";
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
-        
+       session_start();
+
+         if ($_SESSION['name'] == NULL ) {
+          # code...
+            session_destroy();
+            session_unset();            
+            header("location:index.php");
+        }
 ?>
 <!DOCTYPE html>
 <html lang="en">
