@@ -159,7 +159,11 @@ if (isset($_POST['submit'])) {
               }
               else{
                   move_uploaded_file($imageTmpPath,$image_dir);
-                  header("Location:allData.php");
+                  ?>
+                  <script>
+                      window.location.href="allData.php";
+                  </script>
+                  <?php
               }
 }
 ?>

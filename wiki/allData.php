@@ -109,8 +109,7 @@ session_start();
                                         <button type="button btn-sm" name="edit" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" <?php echo $book_results['Book_Id'] ?>>Edit</button>
                                     </a>
                                 </td>
-                                <td>
-                                    
+                                <td>                                    
                                     <a href="delete.php?Id=<?php echo $data['Id'] ?>">
                                         <button type="button btn-sm" class="btn btn-danger">Delete</button>
                                     </a>
