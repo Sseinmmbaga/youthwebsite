@@ -2,12 +2,12 @@
 include_once "./include/connection.php";
   error_reporting(E_ALL);
   ini_set('display_errors', 1);
-      if ($_SESSION['name'] == NULL ) {
-          # code...
-            session_destroy();
-            session_unset();            
-            header("location:index.php");
-        }
+  if(!empty($_SESSION["Admin_Username"])) {
+   
+        session_destroy();         
+        header("location:index.php");
+    }
+       
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +33,7 @@ include_once "./include/connection.php";
       <div class="nav_items">
         <a href="allData.php" >All Data</a>
         <a href="insert_data.php" class="active">Insert Data</a>
-        <a href="edit_data.php">Edit Data</a>
+        <a href="allData.php">Edit Data</a>
       </div>
    </nav>
 </aside>

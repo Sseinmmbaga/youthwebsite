@@ -42,7 +42,8 @@ session_start();
       <div class="nav_items">
          <a href="allData.php" class="active">All Data</a>
          <a href="insert_data.php">Insert Data</a>
-         <a href="edit_data.php">Edit Data</a>
+         <a href="allData.php">Edit Data</a>
+         <a href="logout.php">Log out</a>
       </div>
    </nav>
 </aside>

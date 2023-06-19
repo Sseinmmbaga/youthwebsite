@@ -90,14 +90,8 @@ include_once "./include/connection.php";
 
                             <form action="" method='POST'>
                                 <?php
-                                //  require_once "./login_now.php";
-                                if ($_GET['message'] == true) {
-                                    # code...
-
-                                ?>
-                                    <div class="alert-light text-danger text-center"><?php echo $_GET['message']; ?></div>
-                                <?php
-                                }
+                                 require_once "index.php";
+                               
                                 ?>
                                 <div class="form-group">
                                     <label for='email'>Username: <sup>*</sup></label>
