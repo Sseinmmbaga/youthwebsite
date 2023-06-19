@@ -99,10 +99,19 @@ function togglePasswordVisibility() {
                             <p class="text-center">Please fill in credentials to log in.</p>
 
                             <form action="" method='POST'>
-                                <?php
-                                 require_once "index.php";
-                              
-                             ?>
+                              <?php
+                                //  require_once "./login_now.php";
+                                if (isset($_GET['message'])) {
+                                         ?>
+                                    <div class="alert-light text-danger text-center"><?php echo $_GET['message']; ?></div>
+                                        <?php                                                                
+                                }
+                                else{
+                                    ?>
+                                    <div class="alert-light text-danger text-center"></div>
+                                    <?php
+                                }
+                                ?>
                                 <div class="form-group">
                                     <label for='email'>Username: <sup>*</sup></label>
                                     <input type='text' name="username" class='form-control form-control-lg'>
