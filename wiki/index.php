@@ -49,10 +49,8 @@ include_once "./include/connection.php";
 
         .color-set-default {
             background-color: #343a40;
-            color: white;
-        }
-
         /* added */
+        }
         a {
 
             text-decoration: none;

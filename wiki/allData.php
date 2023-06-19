@@ -42,7 +42,7 @@ session_start();
       <div class="nav_items">
          <a href="allData.php" class="active">All Data</a>
          <a href="insert_data.php">Insert Data</a>
-         <a href="allData.php">Edit Data</a>
+         <!-- <a href="edit_data.php">Edit Data</a> -->
          <a href="logout.php">Log out</a>
       </div>
    </nav>
@@ -110,6 +110,7 @@ session_start();
                                     </a>
                                 </td>
                                 <td>
+                                    
                                     <a href="delete.php?Id=<?php echo $data['Id'] ?>">
                                         <button type="button btn-sm" class="btn btn-danger">Delete</button>
                                     </a>

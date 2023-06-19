@@ -34,7 +34,7 @@ include_once "./include/connection.php";
       <div class="nav_items">
         <a href="allData.php" >All Data</a>
         <a href="insert_data.php" class="active">Insert Data</a>
-        <a href="allData.php">Edit Data</a>
+        <!-- <a href="allData.php">Edit Data</a> -->
       </div>
    </nav>
 </aside>
