@@ -73,7 +73,19 @@ include_once "./include/connection.php";
             position: absolute;
 
         }
+
+       
     </style>
+    <script>
+function togglePasswordVisibility() {
+  var passwordInput = document.getElementById("password");
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+  } else {
+    passwordInput.type = "password";
+  }
+}
+</script>
 </head>
 
 <body>
@@ -91,6 +103,7 @@ include_once "./include/connection.php";
                             <form action="" method='POST'>
                                 <?php
                                  require_once "index.php";
+                              
                              ?>
                                 <div class="form-group">
                                     <label for='email'>Username: <sup>*</sup></label>
@@ -98,9 +111,10 @@ include_once "./include/connection.php";
                                     <span class="invalid-feedback"></span>
                                 </div>
                                 <div class=" pass mt-3">
-                                    <label for='password'>Password: <sup>*</sup></label>
+                                    <label for='password' >Password: <sup>*</sup></label>
                                     <!-- <span><i class="fa fa-eye" id="eye"></i></span> -->
-                                    <input type="password" name="password" class='form-control form-control-lg' autocomplete="current-password">
+                                    <input type="password" name="password" class='form-control form-control-lg' autocomplete="current-password"  id="password">
+                                    <input type="checkbox" onclick="togglePasswordVisibility()"> Show Password
 
                                 </div>                               
                                 <div class="row mt-3 text-center">                                    
