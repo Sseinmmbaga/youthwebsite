@@ -91,8 +91,7 @@ include_once "./include/connection.php";
                             <form action="" method='POST'>
                                 <?php
                                  require_once "index.php";
-                               
-                                ?>
+                             
                                 <div class="form-group">
                                     <label for='email'>Username: <sup>*</sup></label>
                                     <input type='text' name="username" class='form-control form-control-lg'>
