@@ -85,7 +85,27 @@ include_once "./include/connection.php";
                 <table>
   <tr>
     <td>
+      <div class="dropdown">           <table>
+  <tr>
+    <td>
       <div class="dropdown">
+        <h4 class="dropbtn">Select multiple images</h4>
+        <hr>
+        <div class="dropdown-content">
+          <label for="file1">File 1</label>
+          <input type="file" id="file1" name="file1">
+          <label for="file2">File 2</label>
+          <input type="file" id="file2" name="file2">
+          <label for="file3">File 3</label>
+          <input type="file" id="file3" name="file3">
+          <label for="file4">File 4</label>
+          <input type="file" id="file5" name="file5">
+                    <label for="file4">File 4</label>
+</div>
+      </div>
+    </td>
+  </tr>
+</table>
         <h4 class="dropbtn">Select multiple images</h4>
         <hr>
         <div class="dropdown-content">
