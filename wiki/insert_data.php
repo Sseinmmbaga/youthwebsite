@@ -82,6 +82,17 @@ include_once "./include/connection.php";
                 <div class="form-group">
                   <input type='file' name="postImage" class='form-control form-control-lg' accept="image/*">
                 </div>
+                <div class="form-group">
+                  <select>
+                    <option>
+                  <input type='file' name="postImage" class='form-control form-control-lg' accept="image/*">
+                  <input type='file' name="postImage" class='form-control form-control-lg' accept="image/*">
+                  <input type='file' name="postImage" class='form-control form-control-lg' accept="image/*">
+                  <input type='file' name="postImage" class='form-control form-control-lg' accept="image/*">
+                  <input type='file' name="postImage" class='form-control form-control-lg' accept="image/*">
+                  </option>
+                </select>
+                </div>
               </div>
               <div class="form-group">
                 <textarea class="form-control bcontent" name="paragraph01" placeholder="Paragraph" maxlength="700"></textarea>
