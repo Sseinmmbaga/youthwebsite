@@ -83,13 +83,12 @@ include_once "./include/connection.php";
                   <input type='file' name="postImage" class='form-control form-control-lg' accept="image/*">
                 </div>
                 <div class="form-group">
-                  <select>
-                    <option>
-                  <input type='file' name="postImage" class='form-control form-control-lg' accept="image/*">
-                  <input type='file' name="postImage" class='form-control form-control-lg' accept="image/*">
-                  <input type='file' name="postImage" class='form-control form-control-lg' accept="image/*">
-                  <input type='file' name="postImage" class='form-control form-control-lg' accept="image/*">
-                  <input type='file' name="postImage" class='form-control form-control-lg' accept="image/*">
+                  <select name="Slide show">
+                    <option>  <input type='file' name="postImage" class='form-control form-control-lg' accept="image/*"> </option>
+                 <option> <input type='file' name="postImage" class='form-control form-control-lg' accept="image/*"></option>
+                 <option> <input type='file' name="postImage" class='form-control form-control-lg' accept="image/*"></option>
+                  <option><input type='file' name="postImage" class='form-control form-control-lg' accept="image/*"></option>
+                  <option><input type='file' name="postImage" class='form-control form-control-lg' accept="image/*">
                   </option>
                 </select>
                 </div>
