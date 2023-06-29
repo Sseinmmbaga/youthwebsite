@@ -80,18 +80,32 @@ include_once "./include/connection.php";
               <div class="form-group">
                 <label> Image </label>
                 <div class="form-group">
-                  <input type='file' name="postImage" class='form-control form-control-lg' accept="image/*">
+                  <input type='file' name="postImage" class='form-control form-control-lg' accept="image/*">     
                 </div>
-                <div class="form-group">
-                  <select name="Slide show">
-                    <option>  <input type='file' name="postImage" class='form-control form-control-lg' accept="image/*"> </option>
-                 <option> <input type='file' name="postImage" class='form-control form-control-lg' accept="image/*"></option>
-                 <option> <input type='file' name="postImage" class='form-control form-control-lg' accept="image/*"></option>
-                  <option><input type='file' name="postImage" class='form-control form-control-lg' accept="image/*"></option>
-                  <option><input type='file' name="postImage" class='form-control form-control-lg' accept="image/*">
-                  </option>
-                </select>
-                </div>
+                <table>
+  <tr>
+    <td>
+      <div class="dropdown">
+        <h4 class="dropbtn">Select multiple images</h4>
+        <hr>
+        <div class="dropdown-content">
+          <label for="file1">File 1</label>
+          <input type="file" id="file1" name="file1">
+          <label for="file2">File 2</label>
+          <input type="file" id="file2" name="file2">
+          <label for="file3">File 3</label>
+          <input type="file" id="file3" name="file3">
+          <label for="file4">File 4</label>
+          <input type="file" id="file4" name="file4">
+          <label for="file5">File 5</label>
+          <input type="file" id="file5" name="file5">
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+                    
+
               </div>
               <div class="form-group">
                 <textarea class="form-control bcontent" name="paragraph01" placeholder="Paragraph" maxlength="700"></textarea>

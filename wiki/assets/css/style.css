@@ -25,6 +25,19 @@ input[readonly] {
 }
 
 /* this is only due to codepen display don't use this outside of codepen */
-.container {
-  padding-top: 20px;
-}
+  /* Style to make all inputs in one row */
+  .dropdown-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* Optional style for table */
+  table {
+    border-collapse: collapse;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+  }
