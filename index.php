@@ -439,11 +439,38 @@ include_once "./connection.php";
                           <div class="tm-content-box">
                               <img src="<?php echo $post_result['Image_Path']?>" alt="Image" class="tm-margin-b-30 img-fluid">
                               <h4 class="tm-margin-b-20 tm-gold-text"><?php echo $post_result['Title']?></h4>
+                              <!-- <p class="tm-margin-b-20">
+                                <?php //echo $post_result['Paragraph1']?>
+                              </p> -->
                               <p class="tm-margin-b-20">
-                                <?php echo $post_result['Paragraph1']?>
+                                <?php
+                                  $paragraph1 = $post_result['Paragraph1'];
+                                  $max_chars = 150; // Maximum characters to show before truncating
+                                                          
+                                  // Check if the content is longer than the maximum characters
+                                  if (strlen($paragraph1) > $max_chars) {
+                                    // Truncate the content
+                                    $truncated_content = substr($paragraph1, 0, $max_chars);
+                                  
+                                    // Find the last space to avoid cutting words in half
+                                    $last_space = strrpos($truncated_content, ' ');
+                                  
+                                    // Display the truncated content
+                                    echo substr($truncated_content, 0, $last_space) . '...';
+                                  
+                                    // Display the "Read More" link to the full content
+                                    $paragraph=$post_result['Id'];
+                                    // $postdetail=$post_result.['$paragraph'];
+                                    // echo '<a href="blog.php?Id=">Read More</a>';
+                                    ?><a href="blog.php?Id=<?php echo $post_result['Id']?>">Read More</a>
+                                    <?php
+                                  } else {
+                                    // Display the full content if it's not truncated  class="tm-btn text-uppercase"
+                                    echo $post_result['Paragraph1'];
+                                  }
+                                ?>
                               </p>
-                              <a href="blog.php?Id=<?php echo $post_result['Id']?>" class="tm-btn text-uppercase">Read More</a>    
-                          </div>  
+                             </div>  
                             <br>
                       </div>
               <?php
@@ -452,31 +479,6 @@ include_once "./connection.php";
               }
                           
               ?>
-                      <!-- <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-
-                          <div class="tm-content-box">
-                              <img src="./Images/image2.jpg" alt="Image" class="tm-margin-b-30 img-fluid">
-                              <h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #2</h4>
-                              <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                              consequat mauris dapibus id. Donec
-                              scelerisque porttitor pharetra</p>
-                              <a href="#" class="tm-btn text-uppercase">Read More</a>    
-                          </div>  
-
-                      </div> -->
-
-                      <!-- <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-
-                          <div class="tm-content-box">
-                              <img src="./Images/image3.jpg" alt="Image" class="tm-margin-b-30 img-fluid">
-                              <h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #3</h4>
-                              <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                              consequat mauris dapibus id. Donec
-                              scelerisque porttitor pharetra</p>
-                              <a href="#" class="tm-btn text-uppercase">Detail</a>    
-                          </div>  
-
-                      </div>  -->
       </div>
     </div>
   </div> 
