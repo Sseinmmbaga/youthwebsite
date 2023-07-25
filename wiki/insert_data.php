@@ -9,12 +9,6 @@ include_once "./include/connection.php";
       session_unset();            
       header("location:index.php");
   }
-   else {
-            if (( time() - $_SESSION['login_timestamp']) > $_SESSION['max_time'] ) {
-                # code...
-                header("Location:index.php");
-            }
-        }
 ?>
 <!DOCTYPE html>
 <html lang="en">

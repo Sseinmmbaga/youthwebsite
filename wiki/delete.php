@@ -4,22 +4,6 @@ ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
 error_reporting(E_ALL);
 $post_Id=$_GET['Id'];
-
-session_start();
-if ($_SESSION['name'] == NULL ) {
-          # code...
-            session_destroy();
-            session_unset();            
-            header("location:index.php");
-        }
-        else {
-            if (( time() - $_SESSION['login_timestamp']) > $_SESSION['max_time'] ) {
-                # code...
-                header("Location:index.php");
-            }
-        }
-
-
 // Check if the deletion is confirmed
 if (isset($_POST['confirm_delete'])) {
     // Delete data from the database

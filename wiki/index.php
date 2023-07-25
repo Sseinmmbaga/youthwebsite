@@ -161,9 +161,7 @@ function togglePasswordVisibility() {
                     if (is_array($user)) {
                         # code...
                     $_SESSION['ID']=$user['Admin_Id'];
-                    $_SESSION['name']=$user['Admin_Username']; 
-                    $_SESSION['login_timestamp']=time();
-                    $_SESSION['max_time']=3*60;
+                    $_SESSION['name']=$user['Admin_Username'];                      
 
                     }
                  }else {
