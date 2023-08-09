@@ -1,9 +1,9 @@
 <?php 
 include_once "./connection.php";
 
-        error_reporting(E_ALL);
-        ini_set('display_errors', 1);
-        
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -170,7 +170,7 @@ include_once "./connection.php";
                 Identify focus areas and long-term goals for advocacy and policy-making.
                 Advocate the value of free knowledge in education
                 Build capacity in our community, educational institutions, and other actors in the education sector.
-                Helping others realize their true potential, especially recognizing the ability they have and how to use it.
+                Helping others realize their true htmlspecialchars potential, especially recognizing the ability they have and how to use it.
                 </p>
               
             </div>

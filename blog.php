@@ -1,5 +1,8 @@
 <?php 
 include_once "./connection.php";
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -75,8 +78,8 @@ include_once "./connection.php";
             <div class="container-fluid">
                 <div class="row">
                     <?php
-                    $selected_id = $_GET['Id'];
-                    include_once "./connection.php";
+                    $selected_id = isset($_GET['Id'])? $_GET['Id'] : null ;
+                    // include_once "./connection.php";
                     if (empty($selected_id)) {
                         # code...
                         $selected_post_query = mysqli_query($conn, "SELECT * FROM `Posts` order by Id desc limit 1");
